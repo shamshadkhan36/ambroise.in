@@ -5,6 +5,7 @@ update_to_local_images.py
 update_all_websites.py
 finalize_ambroise_sites.py
 fix_trailing_slash.py
+apply_universal_base.py
 ambroise_*.html
 ambroise_dump.html
 ambroise_extracted_summary.txt

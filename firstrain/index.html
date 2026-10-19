@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <script>
-    if (location.protocol !== 'file:' && !location.pathname.endsWith('/') && !location.pathname.endsWith('.html')) {
-      location.replace(location.pathname + '/' + location.search + location.hash);
-    }
+    (function() {
+      if (location.protocol !== 'file:') {
+        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|firstrain|inoways|brade|showcase)(\/|$)/);
+        if (m) {
+          document.write('<base href="/' + m[1] + '/">');
+        }
+      }
+    })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
