@@ -7,6 +7,7 @@ finalize_ambroise_sites.py
 fix_trailing_slash.py
 apply_universal_base.py
 inline_critical_css.py
+update_hub_links.py
 ambroise_*.html
 ambroise_dump.html
 ambroise_extracted_summary.txt
