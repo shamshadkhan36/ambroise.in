@@ -15,6 +15,805 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ambroise Experiential Solutions • Exhibition Stand Design & Corporate Events</title>
   <meta name="description" content="Exhibition stands designed, fabricated and installed by our own Mumbai team since 2014. Custom, modular and portable, all-inclusive from ₹1.8 lakh.">
+  <style id="embedded-site-styles">
+/* ==========================================================================
+   Theme Name: Ambroise Experiential - Dynamic Studio & Booth Configurator Theme
+   Theme URI: http://ambroise.in
+   Author: Ambroise (Formerly 3 Arrows)
+   Author URI: http://ambroise.in
+   Description: Ambroise (formerly 3 arrows) - Inspired by Experience SOL
+   Version: 1.0.0
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --saffron: #f6b616;
+  --saffron-deep: #db9c08;
+  --saffron-ink: #7e5607;
+  --ink: #1a1d21;
+  --ink-soft: #1c283a;
+  --deep: #01020e;
+  --ivory: #f6f7f8;
+  --panel-bg: #eef0f2;
+  --muted: #4c545c;
+  --faint: #78828c;
+  --line: #e4e7ea;
+  --wa-green: #0b6b5f;
+  --wa-deep: #075e54;
+  --white: #ffffff;
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: 'Space Grotesk', sans-serif;
+  --max-w: 1320px;
+  --tri-grad: linear-gradient(90deg, #1a1d21 0 33.33%, #7e5607 33.33% 66.66%, #f6b616 66.66% 100%);
+  --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 clamp(18px, 3.2vw, 40px);
+}
+
+/* ==========================================================================
+   Top Utility Bar
+   ========================================================================== */
+.sol-topbar {
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  padding: 8px 0;
+}
+
+.topbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.region-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.region-switcher span {
+  color: var(--muted);
+}
+
+.region-switcher a.active {
+  color: var(--saffron-ink);
+  border-bottom: 2px solid var(--saffron);
+}
+
+.tb-contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.tb-wa {
+  background: var(--wa-green);
+  color: #fff !important;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.tb-wa:hover {
+  background: var(--wa-deep);
+}
+
+/* ==========================================================================
+   Header Navigation
+   ========================================================================== */
+.sol-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(90deg, #7e5607 0 50%, #f6b616 50% 100%) 1;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+}
+
+.brand-sol {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sol-logo-text {
+  font-family: var(--font-accent);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.sol-logo-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: var(--saffron-ink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background: var(--ivory);
+  color: var(--saffron-ink);
+}
+
+.sol-cta-btn {
+  background: var(--saffron);
+  color: var(--ink);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  border: 1px solid var(--saffron-deep);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(246, 182, 22, 0.25);
+  transition: var(--transition);
+}
+
+.sol-cta-btn:hover {
+  background: var(--saffron-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(246, 182, 22, 0.35);
+}
+
+.mobile-nav-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.sol-hero {
+  position: relative;
+  background: radial-gradient(120% 90% at 50% -10%, #2a201c 0%, #17110f 60%, #0c0807 100%);
+  color: var(--white);
+  padding: 80px 0 70px;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--saffron);
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--tri-grad);
+}
+
+.sol-hero h1 {
+  font-family: var(--font-accent);
+  font-size: clamp(34px, 4.4vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.sol-hero h1 span {
+  color: var(--saffron);
+}
+
+.sol-hero p.lead {
+  font-size: 1.05rem;
+  color: #d8d8d8;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-secondary {
+  background: var(--saffron-ink);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  border: 1px solid var(--saffron-ink);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: #644405;
+  color: #fff;
+}
+
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 24px;
+  flex-wrap: wrap;
+}
+
+.tfact b {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  display: block;
+}
+
+.tfact span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tsep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.15);
+}
+
+.hero-panel-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+}
+
+.hero-panel-card img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.panel-meta {
+  padding: 20px 24px;
+  background: rgba(10, 10, 10, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-meta h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.panel-meta span {
+  font-size: 0.8rem;
+  color: var(--saffron);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Pricing & Tiers Section (All-inclusive from ₹1.8L)
+   ========================================================================== */
+.pricing-section {
+  padding: 80px 0;
+  background: var(--ivory);
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-head h2 {
+  font-family: var(--font-accent);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.section-head h2 em {
+  font-style: normal;
+  color: var(--saffron-ink);
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.tier-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition);
+}
+
+.tier-card.featured {
+  border-color: var(--saffron);
+  box-shadow: 0 16px 40px rgba(246, 182, 22, 0.15);
+  transform: translateY(-6px);
+}
+
+.tier-card.featured::before {
+  content: 'MOST POPULAR';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--saffron);
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.tier-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.tier-price {
+  font-family: var(--font-accent);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--saffron-ink);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.tier-for {
+  font-size: 0.85rem;
+  color: var(--faint);
+  margin-bottom: 24px;
+}
+
+.tier-features {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-bottom: 30px;
+  flex: 1;
+}
+
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.tier-features li svg {
+  color: var(--saffron-deep);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Interactive Stand Configurator
+   ========================================================================== */
+.config-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.config-box {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: clamp(24px, 4vw, 48px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+}
+
+.config-group {
+  margin-bottom: 24px;
+}
+
+.config-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  color: var(--ink-soft);
+}
+
+.chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.chip.active, .chip:hover {
+  background: var(--saffron);
+  border-color: var(--saffron);
+  color: var(--ink);
+}
+
+.summary-card {
+  background: var(--white);
+  border: 2px solid var(--saffron);
+  border-radius: 14px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary-head {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--saffron-ink);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.summary-val {
+  font-family: var(--font-accent);
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Cities Coverage Bar
+   ========================================================================== */
+.cities-bar {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 30px 0;
+  background: var(--panel-bg);
+}
+
+.cities-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.city-pill {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   Portfolio Grid (SOL Work)
+   ========================================================================== */
+.work-section {
+  padding: 80px 0;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.work-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #141414;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: var(--transition);
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.14);
+}
+
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.06);
+}
+
+.work-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 20px 16px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0.95) 100%);
+  color: #fff;
+}
+
+.work-card-info h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.work-card-info span {
+  font-size: 0.78rem;
+  color: var(--saffron);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+.faq-section {
+  padding: 80px 0;
+  background: var(--ivory);
+}
+
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--saffron);
+  border-radius: 8px;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+.faq-q {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 12px;
+  line-height: 1.6;
+  display: none;
+}
+
+.faq-item.active .faq-a {
+  display: block;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.sol-footer {
+  background: var(--ivory);
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #7e5607 0 50%, #f6b616 50% 100%) 1;
+  padding: 60px 0 30px;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 48px;
+}
+
+.foot-col h4 {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--saffron-ink);
+  margin-bottom: 16px;
+}
+
+.foot-col ul li {
+  margin-bottom: 8px;
+}
+
+.foot-col a {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.foot-col a:hover {
+  color: var(--saffron-ink);
+}
+
+.foot-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--faint);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .tiers-grid {
+    grid-template-columns: 1fr;
+  }
+  .config-box {
+    grid-template-columns: 1fr;
+  }
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .foot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: block;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .foot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
