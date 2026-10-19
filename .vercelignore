@@ -1,0 +1,10 @@
+# Vercel Ignore File
+deploy_to_ambroise.py
+download_local_assets.py
+update_to_local_images.py
+browse-live-server.py
+share-with-client.py
+*.bat
+*.ps1
+*.log
+.DS_Store

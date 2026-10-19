@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambroise • Inspired Exhibition Websites Showcase</title>
+  <meta name="description" content="Inspired websites collection created for top Indian exhibition stand designers: The Prop Shop India, Experience SOL, First Rain, Inoways, and Brade. Hosted on Ambroise.in.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111726;
+      --card-hover: #172138;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #3b82f6;
+      --text: #ffffff;
+      --muted: #94a3b8;
+      --font: 'Plus Jakarta Sans', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Bar */
+    .top-bar-nav {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #93c5fd;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .back-home-link:hover {
+      color: #fff;
+    }
+
+    /* Hero Header */
+    .hub-header {
+      padding: 50px 0 36px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      color: #93c5fd;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .hub-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hub-desc {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+
+    /* Grid */
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+      margin-top: 20px;
+    }
+
+    .site-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .site-card:hover {
+      transform: translateY(-6px);
+      background: var(--card-hover);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-banner {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .site-card:hover .card-banner img {
+      transform: scale(1.08);
+    }
+
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(17, 23, 38, 0.95) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .card-num-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .palette-pills {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .color-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.6);
+    }
+
+    .card-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .card-url {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .card-summary {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .feature-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .feature-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn-launch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13.5px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-launch-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-launch-primary:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-launch-folder {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e2e8f0;
+      cursor: pointer;
+    }
+
+    .btn-launch-folder:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    /* Live Preview Modal Frame */
+    .preview-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+    }
+
+    .preview-modal.active {
+      display: flex;
+    }
+
+    .modal-bar {
+      height: 56px;
+      background: #101626;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .modal-frame {
+      flex: 1;
+      width: 100%;
+      border: none;
+      background: #fff;
+    }
+
+    .modal-close-btn {
+      background: #ef4444;
+      color: #fff;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    .hub-footer {
+      margin-top: 80px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-bar-nav">
+      <a href="/" class="back-home-link">← Return to Ambroise.in Main Site</a>
+      <span style="font-size: 13px; color: var(--muted);">Live on Ambroise.in</span>
+    </div>
+
+    <!-- Hub Header -->
+    <header class="hub-header">
+      <div style="margin-bottom: 24px;"><img src="thepropshopindia/images/ambroise-logo.png" alt="Ambroise" style="height: 52px; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));"></div>
+      <div class="hub-badge">★ AMBROISE (FORMERLY 3 ARROWS) • IIM-CALCUTTA ALUMNUS VENTURE</div>
+      <h1 class="hub-title">Indian Exhibition Stand Design Leaders</h1>
+      <p class="hub-desc">
+        Full-featured inspired websites created for each requested brand. Each website is organized in its own self-contained folder with custom CSS styling, interactive calculators, 3D render tools, and WordPress compatibility headers.
+      </p>
+    </header>
+
+    <!-- 5 Inspired Websites Grid -->
+    <div class="hub-grid">
+
+      <!-- 1. The Prop Shop India -->
+      <div class="site-card">
+        <div class="card-banner">
+          <img src="../thepropshopindia/images/hero.jpg" alt="The Prop Shop India">
+          <span class="card-num-badge">01 / 05</span>
+          <div class="palette-pills">
+            <span class="color-dot" style="background: #cb2024;" title="Propshop Red"></span>
+            <span class="color-dot" style="background: #161616;" title="Deep Ink"></span>
+            <span class="color-dot" style="background: #ffffff;" title="White"></span>
+          </div>
+          <div class="banner-overlay">
+            <span style="font-size: 12px; font-weight: 700; color: #ff7679; text-transform: uppercase;">ambroise.in/thepropshopindia/</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">The Prop Shop India</h2>
+          <span class="card-url">thepropshopindia.com</span>
+          <p class="card-summary">
+            India's only NSE-listed pure-play exhibition company. Features interactive Stall Area Cost Calculator, Split NSE proof section, KPI counter bar, and filterable portfolio grid.
+          </p>
+
+          <div class="feature-tag-list">
+            <span class="feature-tag">NSE Listed Brand</span>
+            <span class="feature-tag">Interactive Cost Slider</span>
+            <span class="feature-tag">Portfolio Category Filters</span>
+            <span class="feature-tag">Quote Modal Drawer</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="../thepropshopindia/index.html" class="btn-launch btn-launch-primary">Open Website ➔</a>
+            <button onclick="openPreview('../thepropshopindia/index.html', 'The Prop Shop India')" class="btn-launch btn-launch-folder">Live Preview</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Experience SOL -->
+      <div class="site-card">
+        <div class="card-banner">
+          <img src="../experiencesol/images/hero.jpg" alt="Experience SOL">
+          <span class="card-num-badge">02 / 05</span>
+          <div class="palette-pills">
+            <span class="color-dot" style="background: #f6b616;" title="Saffron Gold"></span>
+            <span class="color-dot" style="background: #1c283a;" title="Slate"></span>
+            <span class="color-dot" style="background: #0b6b5f;" title="WhatsApp Green"></span>
+          </div>
+          <div class="banner-overlay">
+            <span style="font-size: 12px; font-weight: 700; color: #f6b616; text-transform: uppercase;">ambroise.in/experiencesol/</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">Experience SOL</h2>
+          <span class="card-url">experiencesol.com</span>
+          <p class="card-summary">
+            SOL Brand Solutions Mumbai team since 2014. Features fixed-scope transparent packages starting from ₹1.8 Lakh, interactive Stand Configurator, regional switcher, and accordion FAQ.
+          </p>
+
+          <div class="feature-tag-list">
+            <span class="feature-tag">All-Inclusive from ₹1.8L</span>
+            <span class="feature-tag">Real-Time Estimator</span>
+            <span class="feature-tag">Pan-India City Hubs</span>
+            <span class="feature-tag">Instant WhatsApp Integration</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="../experiencesol/index.html" class="btn-launch btn-launch-primary">Open Website ➔</a>
+            <button onclick="openPreview('../experiencesol/index.html', 'Experience SOL')" class="btn-launch btn-launch-folder">Live Preview</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. First Rain -->
+      <div class="site-card">
+        <div class="card-banner">
+          <img src="../firstrain/images/reality.jpg" alt="First Rain">
+          <span class="card-num-badge">03 / 05</span>
+          <div class="palette-pills">
+            <span class="color-dot" style="background: #63ff49;" title="Neon Lime"></span>
+            <span class="color-dot" style="background: #05fff6;" title="Neon Cyan"></span>
+            <span class="color-dot" style="background: #000000;" title="OLED Black"></span>
+          </div>
+          <div class="banner-overlay">
+            <span style="font-size: 12px; font-weight: 700; color: #63ff49; text-transform: uppercase;">ambroise.in/firstrain/</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">First Rain</h2>
+          <span class="card-url">firstrain.co.in</span>
+          <p class="card-summary">
+            High-tech futuristic spatial design agency. Features Bebas Neue headings, electric neon marquee, interactive Render vs Reality switcher, and Mumbai/Thane/Delhi strategic hubs.
+          </p>
+
+          <div class="feature-tag-list">
+            <span class="feature-tag">Dark Mode &amp; Neon Gradient</span>
+            <span class="feature-tag">Render vs Reality Switcher</span>
+            <span class="feature-tag">Tilted -10° Hero Badge</span>
+            <span class="feature-tag">Turnkey Brief Generator</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="../firstrain/index.html" class="btn-launch btn-launch-primary">Open Website ➔</a>
+            <button onclick="openPreview('../firstrain/index.html', 'First Rain')" class="btn-launch btn-launch-folder">Live Preview</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Inoways -->
+      <div class="site-card">
+        <div class="card-banner">
+          <img src="../inoways/images/hero.jpg" alt="Inoways Worldwide">
+          <span class="card-num-badge">04 / 05</span>
+          <div class="palette-pills">
+            <span class="color-dot" style="background: #0052cc;" title="Tech Blue"></span>
+            <span class="color-dot" style="background: #00b8d9;" title="Cyan"></span>
+            <span class="color-dot" style="background: #ff5630;" title="Coral"></span>
+          </div>
+          <div class="banner-overlay">
+            <span style="font-size: 12px; font-weight: 700; color: #00b8d9; text-transform: uppercase;">ambroise.in/inoways/</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">Inoways</h2>
+          <span class="card-url">inoways.com</span>
+          <p class="card-summary">
+            Worldwide Exhibit Solutions across 45+ countries. Features proprietary display system tabs (Fabrix™, Magnafix™, Inofix™, Maxefx™), global factory network, and sustainability carbon metrics.
+          </p>
+
+          <div class="feature-tag-list">
+            <span class="feature-tag">Fabrix™ Lightbox Tabs</span>
+            <span class="feature-tag">Global 45+ Country Network</span>
+            <span class="feature-tag">80% Waste Reduction Metric</span>
+            <span class="feature-tag">Catalog Download Triggers</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="../inoways/index.html" class="btn-launch btn-launch-primary">Open Website ➔</a>
+            <button onclick="openPreview('../inoways/index.html', 'Inoways Worldwide')" class="btn-launch btn-launch-folder">Live Preview</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Brade Events & Exhibitions -->
+      <div class="site-card">
+        <div class="card-banner">
+          <img src="../brade/images/craft-bespoke.jpg" alt="Brade Events">
+          <span class="card-num-badge">05 / 05</span>
+          <div class="palette-pills">
+            <span class="color-dot" style="background: #d4af37;" title="Metallic Gold"></span>
+            <span class="color-dot" style="background: #0b132b;" title="Midnight Navy"></span>
+            <span class="color-dot" style="background: #f7e7b4;" title="Champagne"></span>
+          </div>
+          <div class="banner-overlay">
+            <span style="font-size: 12px; font-weight: 700; color: #d4af37; text-transform: uppercase;">ambroise.in/brade/</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">Brade Events &amp; Exhibitions</h2>
+          <span class="card-url">brade.in</span>
+          <p class="card-summary">
+            Navi Mumbai event management and exhibition powerhouse established in 2004. Features majestic Cinzel typography, 20+ years heritage counter, craftsmanship verticals, and private consultation desk.
+          </p>
+
+          <div class="feature-tag-list">
+            <span class="feature-tag">Est. 2004 Heritage</span>
+            <span class="feature-tag">Luxury Navy &amp; Gold Palette</span>
+            <span class="feature-tag">Nerul Navi Mumbai Office</span>
+            <span class="feature-tag">Turnkey Stall Fabrication</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="../brade/index.html" class="btn-launch btn-launch-primary">Open Website ➔</a>
+            <button onclick="openPreview('../brade/index.html', 'Brade Events & Exhibitions')" class="btn-launch btn-launch-folder">Live Preview</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="hub-footer">
+      <div>Ambroise Design Studio • Hosted alongside Ambroise.in without disturbing existing files</div>
+      <div style="margin-top: 6px; font-size: 12px; color: #64748b;">
+        Each folder includes standard WordPress theme headers in style.css and modular HTML5 / CSS3 / Vanilla JS files.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Live Modal Preview -->
+  <div class="preview-modal" id="previewModal">
+    <div class="modal-bar">
+      <span id="modalSiteName" style="font-weight: 700; color: #fff; font-size: 14px;">Site Preview</span>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <a id="modalExternalLink" href="#" target="_blank" style="color: var(--accent); font-size: 13px; font-weight: 600;">Open in New Tab ↗</a>
+        <button class="modal-close-btn" onclick="closePreview()">Close Preview [×]</button>
+      </div>
+    </div>
+    <iframe class="modal-frame" id="previewFrame" src=""></iframe>
+  </div>
+
+  <script>
+    function openPreview(url, name) {
+      const modal = document.getElementById('previewModal');
+      const frame = document.getElementById('previewFrame');
+      const title = document.getElementById('modalSiteName');
+      const extLink = document.getElementById('modalExternalLink');
+
+      frame.src = url;
+      title.textContent = name + ' (Live Interactive Preview)';
+      extLink.href = url;
+      modal.classList.add('active');
+    }
+
+    function closePreview() {
+      const modal = document.getElementById('previewModal');
+      const frame = document.getElementById('previewFrame');
+      frame.src = '';
+      modal.classList.remove('active');
+    }
+  </script>
+</body>
+</html>

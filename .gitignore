@@ -1,0 +1,14 @@
+# Git Ignore
+deploy_to_ambroise.py
+download_local_assets.py
+update_to_local_images.py
+update_all_websites.py
+finalize_ambroise_sites.py
+ambroise_*.html
+ambroise_dump.html
+ambroise_extracted_summary.txt
+ambroise_assets/
+*.log
+__pycache__/
+*.pyc
+.DS_Store
