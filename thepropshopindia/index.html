@@ -490,6 +490,194 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   Hero Lead CTA Form Card
+   ========================================================================== */
+.hero-lead-card {
+  background: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  padding: 26px 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.25);
+  position: relative;
+  z-index: 5;
+}
+
+.hero-lead-card-head {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.lead-card-badge {
+  display: inline-block;
+  background: rgba(203, 32, 36, 0.1);
+  color: #cb2024;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(203, 32, 36, 0.2);
+}
+
+.lead-card-title {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4px;
+  letter-spacing: 0.4px;
+  line-height: 1.25;
+}
+
+.lead-card-sub {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.hero-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hero-form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.hero-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.hero-field label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #475569;
+  letter-spacing: 0.5px;
+}
+
+.hero-field input,
+.hero-field select {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 13.5px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.hero-field input:focus,
+.hero-field select:focus {
+  outline: none;
+  border-color: #cb2024;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(203, 32, 36, 0.15);
+}
+
+.hero-form-submit-btn {
+  background: #cb2024;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(203, 32, 36, 0.35);
+}
+
+.hero-form-submit-btn:hover {
+  background: #a9171b;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(203, 32, 36, 0.45);
+}
+
+.hero-form-trust {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 2px;
+  padding-top: 6px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.hero-form-success {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.hero-form-success .success-icon {
+  width: 48px;
+  height: 48px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+}
+
+.hero-form-success h4 {
+  font-size: 19px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.hero-form-success p {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.hero-form-success .ref-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12.5px;
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 640px) {
+  .hero-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    KPI Stats Bar (Propshop Red Bar)
    ========================================================================== */
 .stats-bar {
@@ -1059,9 +1247,10 @@ button, input, select, textarea {
         <span>★ AMBROISE (FORMERLY 3 ARROWS) • IIM-CALCUTTA ALUMNUS VENTURE</span>
       </div>
       <div class="top-contact">
-        <span>Global Delivery Across 60+ Countries</span>
-        <a href="tel:+919820012345">📞 022 - 65 274 274</a>
+        <span>Booking Exhibitions 2026-2027</span>
+        <a href="tel:+912265274274">📞 022 - 65 274 274</a>
         <a href="mailto:info@ambroise.in">✉️ info@ambroise.in</a>
+        <a href="#heroForm" class="top-cta-pill" style="background: #cb2024; color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 11.5px; margin-left: 6px;">Instant 3D Proposal &rarr;</a>
       </div>
     </div>
   </div>
@@ -1083,7 +1272,7 @@ button, input, select, textarea {
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-red open-modal">Request 3D Concept</button>
+        <a href="#heroForm" class="btn btn-red">Request 3D Concept</a>
         <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
       </div>
     </div>
@@ -1098,7 +1287,7 @@ button, input, select, textarea {
           <h1 class="hero-title">AMBROISE <span>EXHIBITION DESIGN</span> &amp; TURNKEY STALL BUILD</h1>
           <p class="hero-desc">Ambroise (formerly 3 arrows) is an entrepreneurial venture by IIM-Calcutta alumnus with 16+ years of corporate MNC experience. We deliver turnkey exhibition stall design, 3D conceptualization, corporate events, and flawless fabrication across India.</p>
           <div class="hero-actions">
-            <button class="btn btn-red open-modal">Get Free Design Proposal</button>
+            <a href="#heroForm" class="btn btn-red">Submit 3D Booth Brief</a>
             <a href="#portfolio" class="btn btn-outline">Explore Our Stalls</a>
           </div>
 
@@ -1119,13 +1308,65 @@ button, input, select, textarea {
         </div>
 
         <div class="hero-visual">
-          <div class="hero-slider-wrap">
-            <div class="hero-slide">
-              <img src="images/hero.jpg" alt="Exhibition Stand Design">
-              <div class="hero-slide-overlay">
-                <span class="hero-slide-badge">Auto Expo 2026</span>
-                <div class="hero-slide-caption">Double Decker Experiential Pavilion • 350 sq.m</div>
+          <div class="hero-lead-card" id="heroForm">
+            <div class="hero-lead-card-head">
+              <div class="lead-card-badge">★ 100% Free 3D Proposal • 24h Turnaround</div>
+              <h3 class="lead-card-title">Request Exhibition Stall Brief</h3>
+              <p class="lead-card-sub">Share your stall requirements to receive a bespoke 3D photorealistic render & turnkey budget.</p>
+            </div>
+            
+            <form class="hero-lead-form" onsubmit="handleHeroFormSubmit(event, 'The Prop Shop India')">
+              <div class="hero-form-row">
+                <div class="hero-field">
+                  <label>Full Name *</label>
+                  <input type="text" name="name" required placeholder="John Doe">
+                </div>
+                <div class="hero-field">
+                  <label>Work Email *</label>
+                  <input type="email" name="email" required placeholder="john@company.com">
+                </div>
               </div>
+
+              <div class="hero-form-row">
+                <div class="hero-field">
+                  <label>Phone / WhatsApp *</label>
+                  <input type="tel" name="phone" required placeholder="+91 98000 00000">
+                </div>
+                <div class="hero-field">
+                  <label>Exhibition / City *</label>
+                  <input type="text" name="exhibition" required placeholder="Auto Expo, BEC Mumbai">
+                </div>
+              </div>
+
+              <div class="hero-form-row single">
+                <div class="hero-field">
+                  <label>Stall Size / Format</label>
+                  <select name="stall_size">
+                    <option value="18-36 sqm">18 - 36 sq.m (Linear / Corner)</option>
+                    <option value="36-72 sqm" selected>36 - 72 sq.m (Island Stall)</option>
+                    <option value="72-120 sqm">72 - 120 sq.m (Grand Island)</option>
+                    <option value="120+ sqm">120+ sq.m (Double Decker Pavilion)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="hero-form-submit-btn">
+                <span>Submit Brief &amp; Get Free 3D Render</span>
+                <span class="btn-arr">➔</span>
+              </button>
+
+              <div class="hero-form-trust">
+                <span>🔒 Confidential</span>
+                <span>⚡ 24h Turnaround</span>
+                <span>🏆 Direct Factory Build</span>
+              </div>
+            </form>
+
+            <div class="hero-form-success" style="display: none;">
+              <div class="success-icon">✓</div>
+              <h4>Brief Submitted Successfully!</h4>
+              <p>Thank you, <strong class="user-submitted-name">Client</strong>! Our Senior Exhibition Architect will connect with you within 24 hours with your custom 3D concept.</p>
+              <div class="ref-badge">Inquiry ID: <span class="lead-ref-id">AMB-8492</span></div>
             </div>
           </div>
         </div>
@@ -1457,5 +1698,24 @@ button, input, select, textarea {
   </div>
 
   <script src="js/main.js"></script>
+  <script>
+    function handleHeroFormSubmit(event, brandName) {
+      event.preventDefault();
+      const form = event.target;
+      const card = form.closest('.hero-lead-card');
+      const nameInput = form.querySelector('input[name="name"]');
+      const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
+      const successBox = card.querySelector('.hero-form-success');
+      const refSpan = card.querySelector('.lead-ref-id');
+      const nameSpan = card.querySelector('.user-submitted-name');
+
+      const randomId = 'AMB-' + Math.floor(1000 + Math.random() * 9000);
+      if (refSpan) refSpan.textContent = randomId;
+      if (nameSpan) nameSpan.textContent = name;
+
+      form.style.display = 'none';
+      if (successBox) successBox.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

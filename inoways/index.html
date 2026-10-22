@@ -315,6 +315,193 @@ ul {
 }
 
 /* ==========================================================================
+   Hero Lead CTA Form Card (Inoways)
+   ========================================================================== */
+.hero-lead-card {
+  background: #0d2248;
+  border: 1px solid rgba(0, 184, 217, 0.35);
+  border-radius: 12px;
+  padding: 26px 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+  position: relative;
+  z-index: 5;
+  color: #ffffff;
+}
+
+.hero-lead-card-head {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.lead-card-badge {
+  display: inline-block;
+  background: rgba(0, 184, 217, 0.15);
+  color: var(--cyan-accent);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(0, 184, 217, 0.3);
+}
+
+.lead-card-title {
+  font-family: var(--font-brand);
+  font-size: 21px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.lead-card-sub {
+  font-size: 12.5px;
+  color: #a4b2c6;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.hero-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hero-form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.hero-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.hero-field label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8da4be;
+  letter-spacing: 0.5px;
+}
+
+.hero-field input,
+.hero-field select {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 13.5px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 6px;
+  background: rgba(9, 30, 66, 0.85);
+  color: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.hero-field input:focus,
+.hero-field select:focus {
+  outline: none;
+  border-color: var(--cyan-accent);
+  box-shadow: 0 0 0 3px rgba(0, 184, 217, 0.25);
+  background: rgba(9, 30, 66, 0.95);
+}
+
+.hero-form-submit-btn {
+  background: var(--coral);
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 86, 48, 0.35);
+}
+
+.hero-form-submit-btn:hover {
+  background: #de350b;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 86, 48, 0.45);
+}
+
+.hero-form-trust {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8da4be;
+  font-weight: 600;
+  margin-top: 2px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-form-success {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.hero-form-success .success-icon {
+  width: 48px;
+  height: 48px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+}
+
+.hero-form-success h4 {
+  font-size: 19px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.hero-form-success p {
+  font-size: 13px;
+  color: #a4b2c6;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.hero-form-success .ref-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  color: var(--cyan-accent);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12.5px;
+  border: 1px solid rgba(0, 184, 217, 0.3);
+}
+
+@media (max-width: 640px) {
+  .hero-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Proprietary Systems Tabs Section
    ========================================================================== */
 .systems-section {
@@ -592,12 +779,13 @@ ul {
   <div class="top-strip">
     <div class="container top-strip-flex">
       <div>
-        <span>Ambroise Detailing: From Conceptualisation to Seamless Turnkey Execution</span>
+        <span>★ AMBROISE (FORMERLY 3 ARROWS) • IIM-CALCUTTA ALUMNUS VENTURE • 45+ COUNTRIES</span>
       </div>
-      <div style="display: flex; gap: 20px;">
-        <span>Operations in 45+ Countries</span>
-        <a href="tel:+912267891234" style="color: #fff;">📞 022 - 65 274 274</a>
-        <a href="mailto:info@ambroise.in" style="color: #fff;">✉️ info@ambroise.in</a>
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <span style="font-size: 12px; color: #cbd5e1;">Global Turnkey Hubs</span>
+        <a href="tel:+912265274274" style="color: #fff; text-decoration: none;">📞 022 - 65 274 274</a>
+        <a href="mailto:info@ambroise.in" style="color: #fff; text-decoration: none;">✉️ info@ambroise.in</a>
+        <a href="#heroForm" style="background: #ff5630; color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 11px;">Request 3D Pitch &rarr;</a>
       </div>
     </div>
   </div>
@@ -624,7 +812,7 @@ ul {
       </nav>
 
       <div style="display: flex; align-items: center; gap: 14px;">
-        <button class="btn-coral ino-download-btn">Download Catalog</button>
+        <a href="#heroForm" class="btn-coral" style="text-decoration: none;">Download Catalog</a>
         <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
       </div>
     </div>
@@ -642,7 +830,7 @@ ul {
           </p>
 
           <div class="hero-btn-group">
-            <button class="btn-coral ino-download-btn">Request International Proposal</button>
+            <a href="#heroForm" class="btn-coral" style="text-decoration: none;">Request International Proposal</a>
             <a href="#systems" class="btn-primary-blue" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">Explore Systems</a>
           </div>
 
@@ -667,8 +855,66 @@ ul {
         </div>
 
         <div class="hero-graphic">
-          <div class="hero-graphic-card">
-            <img src="images/hero.jpg" alt="Ambroise Global Exhibition Stand">
+          <div class="hero-lead-card" id="heroForm">
+            <div class="hero-lead-card-head">
+              <div class="lead-card-badge">★ Worldwide Exhibit Solutions • 45+ Countries</div>
+              <h3 class="lead-card-title">Request International 3D Brief</h3>
+              <p class="lead-card-sub">Modular display systems & turnkey fabrication across 45+ countries. Fast concept turnaround.</p>
+            </div>
+            
+            <form class="hero-lead-form" onsubmit="handleHeroFormSubmit(event, 'Inoways Worldwide')">
+              <div class="hero-form-row">
+                <div class="hero-field">
+                  <label>Full Name *</label>
+                  <input type="text" name="name" required placeholder="John Doe">
+                </div>
+                <div class="hero-field">
+                  <label>Work Email *</label>
+                  <input type="email" name="email" required placeholder="john@company.com">
+                </div>
+              </div>
+
+              <div class="hero-form-row">
+                <div class="hero-field">
+                  <label>Phone / WhatsApp *</label>
+                  <input type="tel" name="phone" required placeholder="+91 98000 00000">
+                </div>
+                <div class="hero-field">
+                  <label>Trade Show &amp; Country *</label>
+                  <input type="text" name="exhibition" required placeholder="e.g. Dubai, Frankfurt, Mumbai">
+                </div>
+              </div>
+
+              <div class="hero-form-row single">
+                <div class="hero-field">
+                  <label>Booth Size / System Type</label>
+                  <select name="stall_size">
+                    <option value="Modular SEG Lightbox (18-36 sqm)">Modular SEG Lightbox (18 - 36 sq.m)</option>
+                    <option value="Custom Island Pavilion (36-72 sqm)" selected>Custom Island Pavilion (36 - 72 sq.m)</option>
+                    <option value="Worldwide Turnkey Booth (72-120 sqm)">Worldwide Turnkey Booth (72 - 120 sq.m)</option>
+                    <option value="Multi-Country Roadshow Cluster">Multi-Country Roadshow Cluster</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="hero-form-submit-btn">
+                <span>Submit Brief &amp; Get International 3D Proposal</span>
+                <span class="btn-arr">➔</span>
+              </button>
+
+              <div class="hero-form-trust">
+                <span>🔒 Zero Waste Modular Systems</span>
+                <span>⚡ 45+ Country Network</span>
+                <span>🏆 16+ Years MNC Leadership</span>
+              </div>
+            </form>
+
+            <div class="hero-form-success" style="display: none;">
+              <div class="success-icon">✓</div>
+              <h4>International Brief Received!</h4>
+              <p>Thank you, <strong class="user-submitted-name">Client</strong>! Our global exhibition engineering desk will deliver your custom 3D layout and technical brief within 24 hours.</p>
+              <div class="ref-badge">Inquiry ID: <span class="lead-ref-id">INO-6371</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -847,5 +1093,24 @@ ul {
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    function handleHeroFormSubmit(event, brandName) {
+      event.preventDefault();
+      const form = event.target;
+      const card = form.closest('.hero-lead-card');
+      const nameInput = form.querySelector('input[name="name"]');
+      const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
+      const successBox = card.querySelector('.hero-form-success');
+      const refSpan = card.querySelector('.lead-ref-id');
+      const nameSpan = card.querySelector('.user-submitted-name');
+
+      const randomId = 'INO-' + Math.floor(1000 + Math.random() * 9000);
+      if (refSpan) refSpan.textContent = randomId;
+      if (nameSpan) nameSpan.textContent = name;
+
+      form.style.display = 'none';
+      if (successBox) successBox.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

@@ -79,3 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+function handleHeroFormSubmit(event, brandName) {
+  event.preventDefault();
+  const form = event.target;
+  const card = form.closest('.hero-lead-card');
+  const nameInput = form.querySelector('input[name="name"]');
+  const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
+  const successBox = card.querySelector('.hero-form-success');
+  const refSpan = card.querySelector('.lead-ref-id');
+  const nameSpan = card.querySelector('.user-submitted-name');
+
+  const randomId = 'AMB-' + Math.floor(1000 + Math.random() * 9000);
+  if (refSpan) refSpan.textContent = randomId;
+  if (nameSpan) nameSpan.textContent = name;
+
+  form.style.display = 'none';
+  if (successBox) successBox.style.display = 'block';
+}

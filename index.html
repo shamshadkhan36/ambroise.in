@@ -308,6 +308,21 @@
 </head>
 <body>
 
+  <!-- Top Announcement Bar -->
+  <div style="background: #0d121f; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 10px 0; font-size: 13px; color: #94a3b8;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div>
+        <span style="color: #60a5fa; font-weight: 800;">★ AMBROISE (FORMERLY 3 ARROWS)</span>
+        <span style="margin-left: 8px;">IIM-Calcutta Alumnus Venture • Turnkey Exhibition &amp; Corporate Event Management</span>
+      </div>
+      <div style="display: flex; gap: 18px; align-items: center;">
+        <a href="tel:+912265274274" style="color: #fff; text-decoration: none;">📞 022 - 65 274 274</a>
+        <a href="mailto:info@ambroise.in" style="color: #fff; text-decoration: none;">✉️ info@ambroise.in</a>
+        <a href="#hubLeadForm" style="background: #2563eb; color: #fff; text-decoration: none; padding: 5px 14px; border-radius: 6px; font-weight: 700; font-size: 12px;">Quick 3D Brief ➔</a>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <!-- Hub Header -->
     <header class="hub-header">
@@ -318,6 +333,30 @@
         Full-featured inspired websites created for each requested brand. Each website is organized in its own self-contained folder with custom CSS styling, 3D render tools, and WordPress compatibility headers.
       </p>
     </header>
+
+    <!-- Quick Brief Submission Banner -->
+    <div style="background: linear-gradient(135deg, #111827 0%, #1e293b 100%); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: 16px; padding: 28px 32px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.45);">
+      <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 32px; align-items: center;">
+        <div>
+          <span style="display: inline-block; background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px;">Direct Lead Desk</span>
+          <h2 style="font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 8px;">Request Free 3D Stall Design Proposal</h2>
+          <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.5; margin: 0;">Have an upcoming exhibition in Mumbai, Delhi, Bangalore or International? Fill out this quick brief to get a custom 3D concept in 24 hours.</p>
+        </div>
+        <div>
+          <form onsubmit="handleHubFormSubmit(event)" id="hubLeadForm" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <input type="text" name="name" required placeholder="Your Name *" style="padding: 10px 14px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff; font-size: 13px;">
+            <input type="email" name="email" required placeholder="Work Email *" style="padding: 10px 14px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff; font-size: 13px;">
+            <input type="tel" name="phone" required placeholder="Phone / WhatsApp *" style="padding: 10px 14px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff; font-size: 13px;">
+            <input type="text" name="exhibition" required placeholder="Exhibition &amp; City *" style="padding: 10px 14px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff; font-size: 13px;">
+            <button type="submit" style="grid-column: 1 / -1; background: #2563eb; color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: 800; font-size: 14px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;">Submit Brief &amp; Receive Free 3D Proposal ➔</button>
+          </form>
+          <div id="hubFormSuccess" style="display: none; background: rgba(34, 197, 94, 0.15); border: 1px solid #22c55e; border-radius: 8px; padding: 20px; text-align: center;">
+            <div style="font-size: 22px; color: #22c55e; font-weight: 800; margin-bottom: 6px;">✓ Brief Submitted Successfully!</div>
+            <div style="font-size: 13.5px; color: #e2e8f0; line-height: 1.5;">Thank you! Our Senior Architect will contact you with a bespoke 3D design concept within 24 hours. Reference: <strong id="hubRefId" style="color: #60a5fa;">AMB-5012</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 3 Inspired Websites Grid -->
     <div class="hub-grid">
@@ -471,6 +510,19 @@
       const frame = document.getElementById('previewFrame');
       frame.src = '';
       modal.classList.remove('active');
+    }
+
+    function handleHubFormSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('hubLeadForm');
+      const successBox = document.getElementById('hubFormSuccess');
+      const refSpan = document.getElementById('hubRefId');
+
+      const randomId = 'AMB-' + Math.floor(1000 + Math.random() * 9000);
+      if (refSpan) refSpan.textContent = randomId;
+
+      form.style.display = 'none';
+      if (successBox) successBox.style.display = 'block';
     }
   </script>
 </body>

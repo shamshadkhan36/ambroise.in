@@ -397,6 +397,193 @@ ul, ol {
 }
 
 /* ==========================================================================
+   Hero Lead CTA Form Card (Experience SOL)
+   ========================================================================== */
+.hero-lead-card {
+  background: #1c283a;
+  border: 1px solid rgba(246, 182, 22, 0.35);
+  border-radius: 12px;
+  padding: 26px 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 5;
+  color: #ffffff;
+}
+
+.hero-lead-card-head {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.lead-card-badge {
+  display: inline-block;
+  background: rgba(246, 182, 22, 0.15);
+  color: var(--saffron);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(246, 182, 22, 0.3);
+}
+
+.lead-card-title {
+  font-family: var(--font-accent);
+  font-size: 21px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.lead-card-sub {
+  font-size: 12.5px;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.hero-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hero-form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.hero-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.hero-field label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.hero-field input,
+.hero-field select {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 13.5px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.hero-field input:focus,
+.hero-field select:focus {
+  outline: none;
+  border-color: var(--saffron);
+  box-shadow: 0 0 0 3px rgba(246, 182, 22, 0.25);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.hero-form-submit-btn {
+  background: var(--saffron);
+  color: #17110f;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(246, 182, 22, 0.35);
+}
+
+.hero-form-submit-btn:hover {
+  background: #ffc83b;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(246, 182, 22, 0.45);
+}
+
+.hero-form-trust {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-top: 2px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-form-success {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.hero-form-success .success-icon {
+  width: 48px;
+  height: 48px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+}
+
+.hero-form-success h4 {
+  font-size: 19px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.hero-form-success p {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.hero-form-success .ref-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  color: var(--saffron);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12.5px;
+  border: 1px solid rgba(246, 182, 22, 0.3);
+}
+
+@media (max-width: 640px) {
+  .hero-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Pricing & Tiers Section (All-inclusive from ₹1.8L)
    ========================================================================== */
 .pricing-section {
@@ -820,19 +1007,18 @@ ul, ol {
 <body>
 
   <!-- Top Utility Bar -->
+  <!-- Top Utility & Announcement Bar -->
   <div class="sol-topbar">
     <div class="container topbar-flex">
-      <div class="region-switcher">
-        <span>Region:</span>
-        <a href="#" class="active">India (IN)</a>
-        <a href="#">UAE / Dubai</a>
-        <a href="#">Europe (EU)</a>
-        <a href="#">USA</a>
+      <div class="region-switcher" style="display: flex; align-items: center; gap: 8px;">
+        <span style="background: rgba(246, 182, 22, 0.2); color: #f6b616; padding: 2px 8px; border-radius: 4px; font-weight: 800; font-size: 11px;">★ AMBROISE</span>
+        <span style="color: #cbd5e1; font-size: 12px;">IIM-Calcutta Alumnus Venture • 16+ Years Corporate MNC Leadership</span>
       </div>
       <div class="tb-contacts">
-        <span class="tb-item">📍 Workshop &amp; Studio: Kandivali (E), Mumbai - 400101</span>
+        <span class="tb-item">📍 Direct Crews in Mumbai, Delhi &amp; Bangalore</span>
         <a href="tel:+912265274274" class="tb-item">📞 022 - 65 274 274</a>
-        <a href="https://wa.me/912265274274" class="tb-item tb-wa">💬 WhatsApp Architect</a>
+        <a href="mailto:info@ambroise.in" class="tb-item">✉️ info@ambroise.in</a>
+        <a href="#heroForm" class="tb-item" style="background: var(--saffron); color: #17110f; font-weight: 800; border-radius: 4px; padding: 4px 12px; margin-left: 6px; text-decoration: none;">Request 3D Pitch &rarr;</a>
       </div>
     </div>
   </div>
@@ -859,7 +1045,7 @@ ul, ol {
       </nav>
 
       <div style="display: flex; align-items: center; gap: 12px;">
-        <button class="sol-cta-btn sol-rfq-btn">Get Itemized Quote</button>
+        <a href="#heroForm" class="sol-cta-btn" style="text-decoration: none;">Get Itemized Quote</a>
         <button class="mobile-nav-btn" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
@@ -877,7 +1063,7 @@ ul, ol {
           </p>
 
           <div class="hero-actions">
-            <button class="sol-cta-btn sol-rfq-btn">Request 3D Pitch Deck</button>
+            <a href="#heroForm" class="sol-cta-btn" style="text-decoration: none;">Request Free 3D Pitch Deck</a>
             <a href="#pricing" class="btn-secondary">View Fixed Packages</a>
           </div>
 
@@ -905,14 +1091,65 @@ ul, ol {
         </div>
 
         <div class="hero-media">
-          <div class="hero-panel-card">
-            <img src="images/hero.jpg" alt="Ambroise Exhibition Stand Execution">
-            <div class="panel-meta">
-              <div>
-                <h4>Pharma &amp; Healthcare Tech Stand</h4>
-                <span style="color: #bbb; font-size: 0.8rem;">CPhI South Asia • 72 sq.m Island Booth</span>
+          <div class="hero-lead-card" id="heroForm">
+            <div class="hero-lead-card-head">
+              <div class="lead-card-badge">★ 100% Free 3D Proposal • Turnkey Packages</div>
+              <h3 class="lead-card-title">Plan Your Exhibition Booth</h3>
+              <p class="lead-card-sub">Get transparent turnkey pricing and a 3D photorealistic layout for your upcoming trade show.</p>
+            </div>
+            
+            <form class="hero-lead-form" onsubmit="handleHeroFormSubmit(event, 'Experience SOL')">
+              <div class="hero-form-row">
+                <div class="hero-field">
+                  <label>Full Name *</label>
+                  <input type="text" name="name" required placeholder="John Doe">
+                </div>
+                <div class="hero-field">
+                  <label>Corporate Email *</label>
+                  <input type="email" name="email" required placeholder="john@company.com">
+                </div>
               </div>
-              <span>Turnkey Delivered</span>
+
+              <div class="hero-form-row">
+                <div class="hero-field">
+                  <label>Phone / WhatsApp *</label>
+                  <input type="tel" name="phone" required placeholder="+91 98000 00000">
+                </div>
+                <div class="hero-field">
+                  <label>Trade Show / City *</label>
+                  <input type="text" name="exhibition" required placeholder="CPhI, BEC Mumbai / Delhi">
+                </div>
+              </div>
+
+              <div class="hero-form-row single">
+                <div class="hero-field">
+                  <label>Stand Package / Floor Size</label>
+                  <select name="stall_size">
+                    <option value="Essential Turnkey (18-36 sqm)">Essential Turnkey (18 - 36 sq.m)</option>
+                    <option value="Signature Custom (36-72 sqm)" selected>Signature Custom (36 - 72 sq.m)</option>
+                    <option value="Grand Island (72-120 sqm)">Grand Island (72 - 120 sq.m)</option>
+                    <option value="Double Decker Flagship (120+ sqm)">Double Decker Flagship (120+ sq.m)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="hero-form-submit-btn">
+                <span>Submit Brief &amp; Get 3D Pitch Deck</span>
+                <span class="btn-arr">➔</span>
+              </button>
+
+              <div class="hero-form-trust">
+                <span>🔒 Transparent Fixed Packages</span>
+                <span>⚡ Direct Mumbai Crew</span>
+                <span>🏆 Turnkey Guarantee</span>
+              </div>
+            </form>
+
+            <div class="hero-form-success" style="display: none;">
+              <div class="success-icon">✓</div>
+              <h4>Proposal Request Received!</h4>
+              <p>Thank you, <strong class="user-submitted-name">Client</strong>! Our Mumbai project architect will contact you within 24 hours with your custom 3D deck and itemized estimate.</p>
+              <div class="ref-badge">Inquiry ID: <span class="lead-ref-id">SOL-9182</span></div>
             </div>
           </div>
         </div>
@@ -1156,5 +1393,24 @@ ul, ol {
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    function handleHeroFormSubmit(event, brandName) {
+      event.preventDefault();
+      const form = event.target;
+      const card = form.closest('.hero-lead-card');
+      const nameInput = form.querySelector('input[name="name"]');
+      const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
+      const successBox = card.querySelector('.hero-form-success');
+      const refSpan = card.querySelector('.lead-ref-id');
+      const nameSpan = card.querySelector('.user-submitted-name');
+
+      const randomId = 'SOL-' + Math.floor(1000 + Math.random() * 9000);
+      if (refSpan) refSpan.textContent = randomId;
+      if (nameSpan) nameSpan.textContent = name;
+
+      form.style.display = 'none';
+      if (successBox) successBox.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

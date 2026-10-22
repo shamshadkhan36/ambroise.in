@@ -32,14 +32,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // RFQ Submission
+  // RFQ Buttons scroll to Hero Lead Form
   const rfqButtons = document.querySelectorAll('.sol-rfq-btn');
   rfqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const email = prompt('Enter your corporate email address to receive the full itemized 3D proposal:');
-      if (email) {
-        alert(`Success! We have generated an inquiry ticket for ${email}. Our Mumbai project architect will contact you shortly.`);
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const heroForm = document.getElementById('heroForm');
+      if (heroForm) {
+        heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const nameInput = heroForm.querySelector('input[name="name"]');
+        if (nameInput) setTimeout(() => nameInput.focus(), 400);
       }
     });
   });
 });
+
+function handleHeroFormSubmit(event, brandName) {
+  event.preventDefault();
+  const form = event.target;
+  const card = form.closest('.hero-lead-card');
+  const nameInput = form.querySelector('input[name="name"]');
+  const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
+  const successBox = card.querySelector('.hero-form-success');
+  const refSpan = card.querySelector('.lead-ref-id');
+  const nameSpan = card.querySelector('.user-submitted-name');
+
+  const randomId = 'SOL-' + Math.floor(1000 + Math.random() * 9000);
+  if (refSpan) refSpan.textContent = randomId;
+  if (nameSpan) nameSpan.textContent = name;
+
+  form.style.display = 'none';
+  if (successBox) successBox.style.display = 'block';
+}
