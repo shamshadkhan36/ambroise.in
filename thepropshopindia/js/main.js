@@ -22,39 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Interactive Stall Cost Estimator
-  const areaRange = document.getElementById('areaRange');
-  const areaValue = document.getElementById('areaValue');
-  const estPrice = document.getElementById('estPrice');
-  const stallTypePills = document.querySelectorAll('.calc-pill[data-rate]');
-  let currentRate = 8500; // default Custom Stall rate per sqm
-
-  if (stallTypePills.length > 0) {
-    stallTypePills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        stallTypePills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        currentRate = parseInt(pill.getAttribute('data-rate'), 10);
-        updateEstimate();
-      });
-    });
-  }
-
-  if (areaRange && areaValue && estPrice) {
-    areaRange.addEventListener('input', () => {
-      areaValue.textContent = `${areaRange.value} sq.m`;
-      updateEstimate();
-    });
-  }
-
-  function updateEstimate() {
-    if (!areaRange || !estPrice) return;
-    const area = parseInt(areaRange.value, 10);
-    const total = area * currentRate;
-    const lakhs = (total / 100000).toFixed(2);
-    estPrice.textContent = `₹${lakhs} Lakhs*`;
-  }
-
   // Portfolio Category Filtering
   const filterButtons = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-card');

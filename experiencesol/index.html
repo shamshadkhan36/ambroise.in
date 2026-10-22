@@ -4,7 +4,7 @@
   <script>
     (function() {
       if (location.protocol !== 'file:') {
-        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|firstrain|inoways|brade|showcase)(\/|$)/);
+        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|inoways|showcase)(\/|$)/);
         if (m) {
           document.write('<base href="/' + m[1] + '/">');
         }
@@ -853,7 +853,6 @@ ul, ol {
       <nav class="nav-links">
         <a href="#about" class="active">Overview</a>
         <a href="#pricing">Pricing &amp; Tiers</a>
-        <a href="#configurator">Cost Planner</a>
         <a href="#work">Portfolio</a>
         <a href="#coverage">Pan-India Hubs</a>
         <a href="#faq">FAQ</a>
@@ -1029,60 +1028,6 @@ ul, ol {
     </div>
   </section>
 
-  <!-- Interactive Stand Configurator -->
-  <section class="config-section" id="configurator">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow" style="margin-bottom: 8px;">Real-Time Estimator</div>
-        <h2>CUSTOMIZE YOUR <em>BOOTH SPECIFICATIONS</em></h2>
-        <p>Pick your stall layout and size to see an instant turnkey quotation.</p>
-      </div>
-
-      <div class="config-box">
-        <div>
-          <div class="config-group">
-            <div class="config-title">1. Execution Style</div>
-            <div class="chips-row">
-              <span class="chip active" data-format-price="9500">Custom Bespoke</span>
-              <span class="chip" data-format-price="13500">Double Deck Mezzanine</span>
-              <span class="chip" data-format-price="7200">Sustainable Modular</span>
-              <span class="chip" data-format-price="11500">Experiential Tech Pod</span>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <div class="config-title">2. Floor Space Allocation</div>
-            <div class="chips-row">
-              <span class="chip" data-size-sqm="18">18 sq.m</span>
-              <span class="chip active" data-size-sqm="36">36 sq.m</span>
-              <span class="chip" data-size-sqm="54">54 sq.m</span>
-              <span class="chip" data-size-sqm="72">72 sq.m</span>
-              <span class="chip" data-size-sqm="120">120 sq.m</span>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <div class="config-title">3. Venue City</div>
-            <div class="chips-row">
-              <span class="chip active">Mumbai (BEC / Jio)</span>
-              <span class="chip">Delhi (IICC Yashobhoomi)</span>
-              <span class="chip">Bangalore (BIEC)</span>
-              <span class="chip">Dubai / GCC</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="summary-card">
-          <div class="summary-head">Projected Turnkey Cost</div>
-          <div class="summary-val" id="configTotal">₹3.42 Lakhs*</div>
-          <div style="font-size: 0.88rem; color: var(--muted); margin-bottom: 24px;" id="configDetails">
-            Custom Bespoke • 36 sq.m All-Inclusive (Design + Fabrication + Turnkey On-Site Handover)
-          </div>
-          <button class="sol-cta-btn sol-rfq-btn">Get Itemized Breakdown (PDF)</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Portfolio / Works Section -->
   <section class="work-section" id="work">
@@ -1180,7 +1125,6 @@ ul, ol {
             <li><a href="#pricing">Custom Exhibition Stands</a></li>
             <li><a href="#pricing">Modular Display Systems</a></li>
             <li><a href="#pricing">Double Decker Stalls</a></li>
-            <li><a href="#configurator">Price Calculator</a></li>
           </ul>
         </div>
 

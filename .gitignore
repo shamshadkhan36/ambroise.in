@@ -8,6 +8,7 @@ fix_trailing_slash.py
 apply_universal_base.py
 inline_critical_css.py
 update_hub_links.py
+deploy_marketing_subdomain.py
 ambroise_*.html
 ambroise_dump.html
 ambroise_extracted_summary.txt

@@ -4,7 +4,7 @@
   <script>
     (function() {
       if (location.protocol !== 'file:') {
-        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|firstrain|inoways|brade|showcase)(\/|$)/);
+        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|inoways|showcase)(\/|$)/);
         if (m) {
           document.write('<base href="/' + m[1] + '/">');
         }
@@ -1077,7 +1077,6 @@ button, input, select, textarea {
       <nav class="main-nav">
         <a href="#about" class="nav-link active">About</a>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#calculator" class="nav-link">Cost Estimator</a>
         <a href="#portfolio" class="nav-link">Portfolio</a>
         <a href="#global" class="nav-link">Global Reach</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -1238,7 +1237,7 @@ button, input, select, textarea {
           <div class="service-body">
             <h3>Custom Exhibition Stands</h3>
             <p>Bespoke spatial design with premium carpentry, CNC routing, acrylic craftsmanship, and signature lighting tailored to your brand identity.</p>
-            <a href="#calculator" class="service-link">Calculate Cost &rarr;</a>
+            <a href="#" class="service-link open-modal">Request 3D Proposal &rarr;</a>
           </div>
         </div>
 
@@ -1249,7 +1248,7 @@ button, input, select, textarea {
           <div class="service-body">
             <h3>Double Decker Stands</h3>
             <p>Certified multi-level architectural structures with VIP private executive lounges, conference rooms, and panoramic trade floor vistas.</p>
-            <a href="#calculator" class="service-link">Calculate Cost &rarr;</a>
+            <a href="#" class="service-link open-modal">Request 3D Proposal &rarr;</a>
           </div>
         </div>
 
@@ -1260,7 +1259,7 @@ button, input, select, textarea {
           <div class="service-body">
             <h3>Modular &amp; Green Booths</h3>
             <p>Reusable aluminum matrix systems and SEG fabric solutions engineered for multi-city roadshows and low environmental footprints.</p>
-            <a href="#calculator" class="service-link">Calculate Cost &rarr;</a>
+            <a href="#" class="service-link open-modal">Request 3D Proposal &rarr;</a>
           </div>
         </div>
 
@@ -1271,64 +1270,8 @@ button, input, select, textarea {
           <div class="service-body">
             <h3>Country &amp; State Pavilions</h3>
             <p>Turnkey large-scale trade delegations representing government bodies, international chambers, and multi-exhibitor national clusters.</p>
-            <a href="#calculator" class="service-link">Calculate Cost &rarr;</a>
+            <a href="#" class="service-link open-modal">Request 3D Proposal &rarr;</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Stall Cost Estimator -->
-  <section class="calculator-section" id="calculator">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 40px;">
-        <div class="section-label" style="justify-content: center;">Instant Online Tool</div>
-        <h2 class="section-title" style="color: #fff;">ESTIMATE YOUR <em>EXHIBITION BUDGET</em></h2>
-        <p style="color: #aaa; max-width: 650px; margin: 0 auto;">
-          Use our interactive budgeting algorithm to project your turnkey stall fabrication costs based on stall geometry and design tier.
-        </p>
-      </div>
-
-      <div class="calc-wrapper">
-        <div class="calc-controls">
-          <div class="calc-form-group">
-            <label class="calc-label">1. Select Stall Format</label>
-            <div class="calc-pills">
-              <button class="calc-pill active" data-rate="8500">Custom Bespoke</button>
-              <button class="calc-pill" data-rate="14500">Double Decker VIP</button>
-              <button class="calc-pill" data-rate="6200">Modular Reusable</button>
-              <button class="calc-pill" data-rate="11000">Interactive Tech Booth</button>
-            </div>
-          </div>
-
-          <div class="calc-form-group">
-            <label class="calc-label">2. Stall Area: <span id="areaValue" style="color: var(--red); font-weight: 700;">36 sq.m</span></label>
-            <input type="range" class="calc-range" id="areaRange" min="12" max="250" step="6" value="36">
-            <div class="calc-range-val">
-              <span>12 sq.m (Starter)</span>
-              <span>100 sq.m (Island)</span>
-              <span>250+ sq.m (Mega Pavilion)</span>
-            </div>
-          </div>
-
-          <div class="calc-form-group">
-            <label class="calc-label">3. Trade Show Location</label>
-            <div class="calc-pills">
-              <button class="calc-pill active">Mumbai (BEC / Jio)</button>
-              <button class="calc-pill">Delhi NCR (IICC / Pragati)</button>
-              <button class="calc-pill">Bangalore (BIEC)</button>
-              <button class="calc-pill">International / Dubai</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="calc-result-box">
-          <div class="calc-est-title">Estimated Project Investment</div>
-          <div class="calc-est-price" id="estPrice">₹3.06 Lakhs*</div>
-          <div class="calc-est-notes">
-            *Includes 3D concept design, complete structural fabrication, electricals, lighting, furniture, flooring &amp; turnkey dismantling.
-          </div>
-          <button class="btn btn-red open-modal">Lock This Estimate</button>
         </div>
       </div>
     </div>
@@ -1426,7 +1369,6 @@ button, input, select, textarea {
             <li><a href="#services">Double Decker Stands</a></li>
             <li><a href="#services">Modular Green Booths</a></li>
             <li><a href="#services">Country Pavilions</a></li>
-            <li><a href="#calculator">Stall Cost Estimator</a></li>
           </ul>
         </div>
 

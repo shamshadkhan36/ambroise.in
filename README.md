@@ -1,6 +1,6 @@
 # Ambroise • Exhibition Design & Corporate Event Website Concepts
 
-A comprehensive suite of **5 tailor-made website design directions for Ambroise**, inspired by leading Indian exhibition booth and stall design companies. Every website is loaded with **authentic Ambroise branding, corporate event services, BTL promotional solutions, founder pedigree (IIM-Calcutta / ISM Dhanbad), and Mumbai contact details** extracted directly from `ambroise.in`.
+A comprehensive suite of **3 tailor-made website design directions for Ambroise**, inspired by leading Indian exhibition booth and stall design companies. Every website is loaded with **authentic Ambroise branding, corporate event services, BTL promotional solutions, founder pedigree (IIM-Calcutta / ISM Dhanbad), and Mumbai contact details** extracted directly from `ambroise.in`.
 
 ---
 
@@ -16,27 +16,19 @@ A comprehensive suite of **5 tailor-made website design directions for Ambroise*
 
 ---
 
-## 🎨 5 Inspired Design Directions for Ambroise
+## 🎨 3 Inspired Design Directions for Ambroise
 
 1. **Ambroise India • Turnkey Exhibition Infrastructure** (`/thepropshopindia`)
    - *Inspired by*: The Prop Shop India
-   - *Features*: Bold modern red & white corporate styling, instant stall cost budgeting calculator, turnkey exhibition infrastructure highlight.
+   - *Features*: Bold modern red & white corporate styling, turnkey exhibition infrastructure highlight, signature portfolio showcases.
 
 2. **Ambroise Experiential • Dynamic Studio & Packages** (`/experiencesol`)
    - *Inspired by*: Experience SOL
-   - *Features*: High-energy tech styling, interactive multi-parameter booth configurator with itemized quotation generator, transparent all-inclusive packages.
+   - *Features*: High-energy tech styling, transparent all-inclusive fixed packages starting from ₹1.8 Lakh, pan-India city hubs.
 
-3. **Ambroise 3D Studio • Spatial Architecture** (`/firstrain`)
-   - *Inspired by*: First Rain
-   - *Features*: Ultra-modern dark neon aesthetic, interactive **3D Render vs. Reality** photo switcher demonstrating zero-defect trade floor handover.
-
-4. **Ambroise Modular Systems • Worldwide Exhibit Solutions** (`/inoways`)
+3. **Ambroise Modular Systems • Worldwide Exhibit Solutions** (`/inoways`)
    - *Inspired by*: Inoways
    - *Features*: Blue & coral engineering aesthetic, interactive modular display systems tabs, multi-country trade fair capabilities.
-
-5. **Ambroise Luxe • Bespoke Pavilions & Corporate Galas** (`/brade`)
-   - *Inspired by*: Brade Events & Exhibitions
-   - *Features*: Royal navy and gold luxury aesthetic, executive leadership pedigree showcase, large-scale custom pavilion masterworks.
 
 ---
 
@@ -77,10 +69,8 @@ Ambroise.inbyshamshadkhan/
 ├── images/                      # Master portal preview banners
 │
 ├── thepropshopindia/            # Concept 1: Modern Corporate Turnkey Infrastructure
-├── experiencesol/               # Concept 2: Dynamic Studio & Booth Configurator
-├── firstrain/                   # Concept 3: Dark Neon 3D Render vs Reality Studio
-├── inoways/                     # Concept 4: Modular Engineering & Display Systems
-└── brade/                       # Concept 5: Luxury Navy & Gold Heritage Pavilions
+├── experiencesol/               # Concept 2: Dynamic Studio & Turnkey Packages
+└── inoways/                     # Concept 3: Modular Engineering & Display Systems
 ```
 
 ---

@@ -20,45 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Interactive Configurator
-  const chipsFormat = document.querySelectorAll('.chip[data-format-price]');
-  const chipsSize = document.querySelectorAll('.chip[data-size-sqm]');
-  const summaryVal = document.getElementById('configTotal');
-  const summaryDesc = document.getElementById('configDetails');
-
-  let baseRate = 9500; // per sqm
-  let sqm = 36;
-  let currentFormat = 'Custom Bespoke';
-
-  chipsFormat.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chipsFormat.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      baseRate = parseInt(chip.getAttribute('data-format-price'), 10);
-      currentFormat = chip.textContent;
-      calcConfig();
-    });
-  });
-
-  chipsSize.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chipsSize.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      sqm = parseInt(chip.getAttribute('data-size-sqm'), 10);
-      calcConfig();
-    });
-  });
-
-  function calcConfig() {
-    if (!summaryVal) return;
-    const total = baseRate * sqm;
-    const inLakhs = (total / 100000).toFixed(2);
-    summaryVal.textContent = `₹${inLakhs} Lakhs*`;
-    if (summaryDesc) {
-      summaryDesc.textContent = `${currentFormat} • ${sqm} sq.m All-Inclusive (Design + Fabrication + Turnkey On-Site Handover)`;
-    }
-  }
-
   // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {

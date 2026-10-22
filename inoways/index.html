@@ -4,7 +4,7 @@
   <script>
     (function() {
       if (location.protocol !== 'file:') {
-        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|firstrain|inoways|brade|showcase)(\/|$)/);
+        var m = location.pathname.match(/\/(thepropshopindia|experiencesol|inoways|showcase)(\/|$)/);
         if (m) {
           document.write('<base href="/' + m[1] + '/">');
         }
